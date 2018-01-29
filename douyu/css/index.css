@@ -1,0 +1,306 @@
+html,#app{
+  width: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fab068;
+}
+[v-cloak]{
+  display: none;
+}
+/*#video_bg {
+  position: static;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  max-height: 700px;
+  width: 100%;
+  height: 700px;
+  z-index: -100;
+  object-fit: cover;
+}*/
+#video_bg {
+  position: static;
+  right: 0;
+  top: 0;
+  /*min-width: 100%;*/
+  max-height: 700px;
+  width: 100%;
+  height: 700px;
+  z-index: -100;
+  object-fit: cover;
+}
+.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.now_yuyue{
+    position: absolute;
+    left: 40%;
+    top: 515px;
+}
+.bofang {
+    position: absolute;
+    top: 517px;
+    right: 20%;
+    display: inline-block;
+    cursor: pointer;
+}
+#cover{
+	position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #000;
+}
+.yuyue_dialog{
+  z-index: 101;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 758px;
+  height: 483px;
+  margin: -241.5px 0 0 -379px;
+  background: url(../img/yuyue_bg.png) no-repeat;
+}
+.close_pop{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 620px;
+  top: 80px;
+}
+.disf{
+  display: flex;
+}
+.content{
+  width: 465px;
+  height: 204px;
+  margin: 0 auto;
+  margin-top: 185px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.left{
+  font-size: 11px;
+  color: #426b9f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 130px;
+  height: 155px;
+}
+.right{
+  width: 290px;
+  height: 200px;
+  margin-left: 32px;
+}
+.android{
+  font-size: 16px;
+  padding-top: 5px;
+  width: 86px;
+  height: 30px;
+  background-color: #fff;
+  color: #999999;
+  border-radius: 15px 0 0 15px;
+  text-align: center;
+  border: solid 1px #eb6949;
+}
+.ios{
+  width: 62px;
+  height: 30px;
+  padding-top: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #999999;
+  border-radius: 0 15px 15px 0;
+  border-color: #eb6949;
+  margin-left: 15px;
+  text-align: center;
+  border: solid 1px #eb6949;
+}
+.active{
+  background-color: #eb6949;
+  color: #fff5e0;
+}
+.mt10{
+  margin-top: 10px;
+}
+.cursorP{
+  cursor: pointer;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #999999; opacity:1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #999999;opacity:1;
+}
+
+input:-ms-input-placeholder{
+    color: #999999;opacity:1;
+}
+
+input::-webkit-input-placeholder{
+    color: #999999;opacity:1;
+}
+input[type="button"]{
+	-webkit-appearance: none;
+}
+.telephone{
+  font-size: 10.5px;
+  height: 30px;
+  border: none;
+  text-align: center;
+  outline: none;
+	width: 100%;
+	padding: 0;
+	background-color: #fff;
+	color: #999999;
+  border-radius: 15px;
+}
+.code{
+  font-size: 10.5px;
+  height: 30px;
+  border: none;
+  text-align: center;
+  outline: none;
+  width: 155px;
+  padding: 0;
+  background-color: #fff;
+  color: #999999;
+  border-radius: 15px 0 0 15px;
+}
+.yanzheng{
+  margin-left: 10px;
+  color: #fff;
+  font-size: 10.5px;
+  background-color: #426b9f;
+  outline: none;
+  text-align: center;
+  padding: 0;
+  border: none;
+  height: 30px;
+  width: 125px;
+  border-radius: 0 15px 15px 0;
+}
+.yyyx{
+  font-size: 16px;
+  color: #fff5e0;
+  width: 100%;
+	height: 26px;
+  border-radius: 15px;
+  background-color: #eb6949;
+  text-align: center;
+  padding-top: 4px;
+}
+.grayBg{
+	background-color: lightGray;
+}
+.pcbg {
+  z-index: 10;
+  background: url("../img/pcbg.jpg") no-repeat center top;
+  height: 1140px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+.person {
+  list-style: none;
+  color: #909090;
+  text-align: center;
+  font-size: 21.34px;
+  margin-top: 60px;
+  cursor: pointer;
+  z-index: 999;
+  position: relative;
+}
+.person li {
+  display: inline-block;
+  text-align: center;
+  width: 108px;
+  text-align: center;
+}
+.switch {
+  margin-left: 140px;
+  margin-top: 39px;
+}
+.cur {
+  color: #ff5a00;
+  text-decoration: underline;
+}
+.footer {
+  margin-top: 87px;
+  font-size: 12px;
+  color: #b9baba;
+}
+.share {
+  list-style: none;
+  position: absolute;
+  right: 49px;
+  cursor: pointer;
+  top: 0;
+}
+.share li {
+  float: left;
+  padding-left: 10px;
+}
+.kefu {
+  position: absolute;
+  right: 47px;
+  top: 74px;
+}
+.qqbg {
+  width: 130px;
+  height: 170px;
+  position: absolute;
+  right: 135px;
+  top: 74px;
+  background: url("../img/qqbg.png") no-repeat center top;
+}
+.qqbg p{
+  line-height: 14px;
+  color: #fff;
+  font-size: 12px;
+}
+.weixin{
+  position: absolute;
+  right: 45px;
+  top: 74px;
+}
+.gift{
+  width: 72%;
+  height: 340px;
+  position: absolute;
+  // margin-top: -46px;
+  left: 13%;
+  background: url("../img/libao2.png") no-repeat center top;
+  background-size: 100%;
+
+}
+.role{
+  padding-top: 17%;
+}
+.success{
+  text-align: left;
+  width: 56%;
+  float: left;
+  display: inline-block;
+  margin-top: 9%;
+}
+.success img {
+  width: 16%;
+  height: 24%;
+  margin-left: 13%;
+  margin-top: -1%;
+}

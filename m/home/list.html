@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>《元气封神》官网，二次元神仙打架手游，河图音频怪物首次合体献唱主题曲</title>
+  <meta name="description" content="《元气封神》是一款融合了精致的东方美学和创新策略玩法的原创趣味卡牌游戏。">
+  <meta name="keywords" content="元气封神、河图、老妖、音频怪物、河图音频怪物、元气封神主题曲、元气封神OP">
+  <meta name="viewport" content="width=640,target-densitydpi=320, minimum-scale=0.5, maximum-scale=2,user-scalable=0">
+  <link rel="stylesheet" href="css/common.css?v=2017.11.9">
+  <link rel="stylesheet" href="css/list.css?v=2017.11.9">
+  <script type="text/javascript" src="http://s0.web.hulai.com/static/jquery/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="http://page.hulai.com/static/open/js/vue-2.1.8.min.js"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/hulai-cms-0.0.1.js?v=2017.11.9"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/hulai-activity-0.0.1.js"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/isMobile.min.js"></script>
+</head>
+<body>
+<div id="app" v-cloak>
+  <div class="top">
+    <img src="img/icon.png">
+    <section>
+      <span>元气封神</span>
+      <span>二次元神仙打架手游</span>
+    </section>
+    <!-- 安卓 -->
+    <img v-show="isAnd" src="img/ljxz.png" @click="showDialog()">
+    <!-- ios -->
+    <a href="https://tracking.hoolai.com/tracking/5903/" v-show="isIos" style="float: right;margin-right: 30px;margin-top: 14px;">
+      <img id="iosdown" src="img/ljxz.png">
+    </a>
+    <!-- <img src="img/ljyy.png" @click="showDialog()"> -->
+  </div>
+  <div class="bg1">
+    <div class="infor">
+      <a href="index.html"><返回</a>
+      <ul class="infor-ul">
+        <li :class="{inforact: zuixin}" @click="goGetList('最新',1,'all')">最新</li>
+        <li :class="{inforact: xinwen}" @click="goGetList('新闻',1,'all')">新闻</li>
+        <li :class="{inforact: gonggao}" @click="goGetList('公告',1,'all')">公告</li>
+        <li :class="{inforact: gonglue}" @click="goGetList('攻略',1,'all')">攻略</li>
+        <li :class="{inforact: huodong}" @click="goGetList('活动',1,'all')">活动</li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <ul class="list">
+      <li v-for="item in listData">
+        <a :href="item.hrefVal">
+          <span class="w420">
+            <span>[</span>{{listName}}<span>]</span>
+            <span>{{item.title}}</span>
+          </span>
+          <span class="fr_dis">{{item.updated}}</span>
+        </a>
+      </li>
+    </ul>
+    <div style="height: 50px;width: 100%;background-color: #fff"></div>
+    <div class="bg3">
+      <!-- 底部 -->
+    <div class="footer">
+      <div class="ui inverted segment">
+        <div class="ui container c_center">
+          <p>
+            温馨提示：抵制不良游戏，拒绝盗版游戏，注意自我保护，谨防受骗上当，适度游戏益脑，沉迷游戏伤身，合理安排时间，享受健康生活
+            <br/> 本网站所有游戏仅适合于年满18周岁以上的用户。如果您未满18周岁，不建议您注册并使用本网络游戏服务；
+            <br/> 如果您坚持使用，请您务必加入本网络游戏防沉迷系统进行实名注册，同时我们将会按照您法定监护人的需求提供您在本网络游戏中的信息。
+            <br/> 您在使用本网络游戏服务之前已经明确知晓网络游戏可能给您带来的一切潜在威胁，包括长时间游戏可能不利于您的身心健康等。为了您的健康请您合理的使用本网络游戏。
+          </p>
+
+          <p>京ICP备11034336号-1 |
+            <a target="_blank" href="http://www.hulai.com/assets/files/huai_wenwangwen.jpg">
+              <font color="#fff">京网文[2011]0744-272号 |</font>
+            </a>
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502033250">
+              <font color="#fff"><img src="http://www.beian.gov.cn/img/ghs.png">京公网安备 11010502033250号 |</font>
+            </a>
+            <a target="_blank" href="http://www.hulai.com/assets/files/huai_xukezheng.pdf">
+              <font color="#fff">（总）网出证（京）字第095号 |</font>
+            </a>
+            <a href="#">
+              <font color="#fff">ICP证书号:京B2-20171148</font>
+            </a>
+          </p>
+          <p>
+            <a class="c_white" target="_blank" href="http://www.hulai.com/server" style="color:#fff">服务协议 |</a>
+            <a class="c_white" target="_blank" href="http://www.hulai.com/privacy" style="color:#fff">隐私权保护声明 |</a>
+            <a class="c_white" target="_blank" href="http://www.hulai.com/minors" style="color:#fff">未成年人家长监护 |</a>
+            <a class="c_white" target="_blank" href="http://www.hulai.com/law" style="color:#fff">法律声明 |</a>
+            <a class="c_white" target="_blank" href="http://www.hulai.com/dispute" style="color:#fff">纠纷、投诉</a>
+          </p>
+          <p>
+            北京市石景山区八大处高科技园区西井路3号3号楼9229房间 010-62662622
+          </p>
+          <p>
+            Copyright © 2015 Hoolai Games. All Rights Reserved | 互爱互动（北京）科技有限公司版权所有
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="dialog" v-show="show_dialog">
+    <div class="yuyue">
+      <!-- <img src="img/cross.png" alt="" class="cross" @click="closeMc()"> -->
+      <div class="dialog_top">
+        <p>选择手机系统:</p>
+        <button class="and" style='outline:none;' :class="{active: isAnd}" @click="chooseXT('android')">Android</button>
+        <button class="ios" style='outline:none;' :class="{active: isIos}" @click="chooseXT('ios')">iOS</button>
+      </div>
+      <div class="middle adjustment">
+        <input v-model="telephone" id="mobile" name="telephone" type="text" class="txt" placeholder="请输入手机号码" style='outline:none;' onfocus="this.placeholder=''" onblur="this.placeholder='输入手机号'">
+      </div>
+      <div class="bottom adjustment">
+        <input type="text" class="txt1" placeholder="请输入验证码" style='outline:none;' v-model="code" id="smscode" name="code" onfocus="this.placeholder=''" onblur="this.placeholder='输入验证码'">
+        <input v-bind:disabled="isDisabled" v-model="smsCodeVal" @click="sendSms(this)" type="button" class="yanzheng" name="name" style='outline:none;'>
+      </div>
+      <div class="last adjustment">
+        <button class="receive" style='outline:none;' @click="saveRecord()">立即提交</button>
+      </div>
+      <p class="people">已有<label id='total' v-model="total" style="color:#eb6949">{{total}}</label>名玩家预约成功</p>
+    </div>
+    <!-- <div class="close" v-show="show_dialog" @click="closeDialog()"></div> -->
+  </div>
+  <div id="cover" v-show="show_dialog" @click="closeDialog()"></div>
+
+</div>
+<script type="text/javascript" src="js/index.js?v=2017.11.9"></script>
+</body>
+</html>

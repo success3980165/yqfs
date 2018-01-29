@@ -1,0 +1,176 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background:url(../img/xianrenbg.jpg?v=20171026) no-repeat top center;
+    height: 1965px;
+    font-family: "微软雅黑"
+}
+a{
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+}
+.auto{
+  margin: 0 auto;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+ul{
+  list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.icon{
+    width: 275px;
+    height: 90px;
+    float: left;
+    margin-right: 12%;
+}
+nav{
+    width: 1198px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.nav_ul{
+    width: 65%;
+    display: inherit;
+    height: 62px;
+    margin: 0;
+    padding: 0;
+}
+.nav_ul li{
+  border-right: dashed 0.2px #fff;
+  width: 20%;
+  list-style: none;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 5px;
+  cursor: pointer;
+  line-height: 49px;
+}
+.nav_ul li:hover{
+  color:  #885015;
+}
+.nav_active{
+  color: #000;
+}
+.box{
+  width: 710px;
+  margin: 0 auto;
+  margin-top: 725px;
+  display: flex;
+}
+.job{
+    width: 710px;
+    display: inherit;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+/*.job_active{
+  color: #000;
+}*/
+.job li{
+  width: 178px;
+  list-style: none;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  line-height: 79px;
+}
+
+.character{
+  margin-top: 56px;
+  width: 100%;
+  height: 525px;
+  background:url(../img/characterbg.png?v=20171026) no-repeat top center;
+}
+.nezha{
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 864px;
+  left: 50%;
+  margin-left: -538px;
+}
+.swiper-container {
+    width: 785px;
+    height: 118px;
+    }
+.lunbo{
+  margin-top: 90px;
+}
+ .lunbo .swiper-wrapper .swiper-slide {
+      width: 112px;
+      margin: 0;
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+.footer{
+  margin-top: 114px;
+}
+#cover2{
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #000;
+}
+.dialog{
+  background: url(../img/qidai.png) no-repeat center top;
+  z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 901px;
+  height: 390px;
+  margin: -195px 0 0 -450.5px;
+}
+.close{
+  width: 70px;
+  height: 50px;
+  margin-left: 414px;
+  margin-top: 343px;
+}
+.iconlist{
+    width: 860px;
+    display: flex;
+    // overflow-x: scroll;
+    margin: 0 auto;
+    margin-top: 98px;
+}
+.imgact{
+  border: 1px solid red;
+  border-radius: 55px;
+}
+
+
+
+

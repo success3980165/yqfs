@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>《元气封神》官网，二次元神仙打架手游，河图音频怪物首次合体献唱主题曲</title>
+  <meta name="keywords" content="元气封神,元气,封神,封神榜,封神演义,封神召唤师,召唤师,召唤,二次元,立绘,国风,国漫,元气封神手游,封神召唤师手游,封神手游,阴阳师,式神,穿越,卡牌,策略,炉石传说,炉石,CR,皇室战争,三国杀,影之诗,实时对战,女娲,女娲娘娘,妲己,纣王,姜子牙,姜太公,姜尚,姬发,燃灯,燃灯道人,杨戬,二郎神,龙吉公主,龙吉,敖寸心,哪吒,托塔天王,李靖,雷震子,太乙,太乙真人,元始天尊,烛龙,四不像,闻太师,闻仲,申公豹,道友请留步,斩仙飞刀,陆压道人,陆压,请宝贝转身,打神鞭,姬昌,周文王,周武王,龙须虎,土行孙,狐狸精,比干,哼哈二将,四大天王,云中子,阎王,孟婆,旱魃,CV">
+  <meta name="description" content="《元气封神》是一款二次元萌神冒险策略手游，融合精致东方美学与创新策略玩法。众多一线画师加盟，倾力打造国风魅力，数十位性格各异封神人物，上阵斗法！独创实时竞技与回合策略玩法完美结合，一分钟上手、三分钟一局，即刻体验全新对战乐趣！冲破次元，萌神集结！">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=640,target-densitydpi=320, minimum-scale=0.5, maximum-scale=2,user-scalable=0">
+  <!-- <link rel="stylesheet" href="css/lunbo.css"> -->
+  <link rel="stylesheet" href="css/index.css?v=0.0.7">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <script type="text/javascript" src="http://s0.web.hulai.com/static/jquery/jquery-1.11.2.min.js"></script>
+  <!-- <script src="js/swiper.min.js"></script> -->
+  <script type="text/javascript" src="http://page.hulai.com/static/open/js/vue-2.1.8.min.js"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/isMobile.min.js"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/hulai-activity-0.0.1.js"></script>
+  <script type="text/javascript">
+    if (!isMobile.any) {
+      var goUrl = '../index.html';
+      var url = window.location.href;
+      var urlArr = url.split('?')
+      if (urlArr.length > 1) {
+        goUrl = goUrl + '?' + urlArr[1];
+      }
+      location.replace(goUrl);
+    }
+  </script>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3bb26f02a14917a88ab6e713c63ef2b6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <style type="text/css">
+    [v-cloak] {
+      display: none;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" v-cloak>
+    <div class="container">
+      <div class="download">
+        <img src="img/android.png" @click="showDialog()">
+        <a href="https://tracking.hoolai.com/tracking/5108/" style="float: right;display: inline-block;width: auto;height: auto;">
+          <img src="img/iOS.png" style="float: right;">
+        </a>
+      </div>
+      <!-- <img src="img/bofang.png" alt="" class="bofang"> -->
+      <div class="mid">
+        <!-- <div class="yuyue">
+          <img src="img/cross.png" alt="" class="cross" @click="closeMc()">
+          <div class="top">
+            <p>选择手机系统:</p>
+            <button class="and" style='outline:none;' :class="{active: isAnd}" @click="chooseXT('android')">Android</button>
+            <button class="ios" style='outline:none;' :class="{active: isIos}" @click="chooseXT('ios')">iOS</button>
+          </div>
+          <div class="middle adjustment">
+            <input v-model="telephone" id="mobile" name="telephone" type="text" class="txt" placeholder="请输入手机号码" style='outline:none;' onfocus="this.placeholder=''" onblur="this.placeholder='输入手机号'">
+          </div>
+          <div class="bottom adjustment">
+            <input type="text" class="txt1" placeholder="请输入验证码" style='outline:none;' v-model="code" id="smscode" name="code" onfocus="this.placeholder=''" onblur="this.placeholder='输入验证码'">
+            <input v-bind:disabled="isDisabled" v-model="smsCodeVal" @click="sendSms(this)" type="button" class="yanzheng" name="name" style='outline:none;'>
+          </div>
+          <div class="last adjustment">
+            <button class="receive" style='outline:none;' @click="saveRecord()">立即提交</button>
+          </div>
+          <p class="people">已有<label id='total' v-model="total" style="color:#eb6949">{{total}}</label>名玩家预约成功</p>
+        </div> -->
+      </div>
+      <img src="img/dacheng.png?v=0.0.2" alt="" style="position: absolute;top: 32.7%;left: 4%;" v-show="successOne">
+      <img src="img/dacheng.png?v=0.0.2" alt="" style="position: absolute;top: 32.7%;left: 37%;" v-show="successTwo">
+      <img src="img/dacheng.png?v=0.0.2" alt="" style="position: absolute;top: 32.7%;left: 70%;" v-show="successThree">
+
+      <div style="position: relative;top: 1178px;height: 853px;width: 567px;text-align: center;margin: 95px auto 0px;" id="iframe-box">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:url(img/xumian.png?v=0.0.2)"></div>
+            <div class="swiper-slide" style="background:url(img/jiangziya.png?v=0.0.2)"></div>
+            <div class="swiper-slide" style="background:url(img/yangjian.png?v=0.0.2)"></div>
+            <div class="swiper-slide" style="background:url(img/aocunxin.png?v=0.0.2)"></div>
+            <div class="swiper-slide" style="background:url(img/zhouwang.png?v=0.0.2)"></div>
+            <div class="swiper-slide" style="background:url(img/daji.png?v=0.0.2)"></div>
+            <div class="swiper-slide" style="background:url(img/jifa.png?v=0.0.2)"></div>
+            <div class="swiper-slide" style="background:url(img/randeng.png?v=0.0.2)"></div>
+          </div>
+          <div class="swiper-button-next swiper-button-white" style="background-image:url(img/right.png?v=0.0.21);margin-left: -35px;margin-top: -123px;"></div>
+          <div class="swiper-button-prev swiper-button-white" style="background-image:url(img/left.png?v=0.0.21);margin-right: -35px;margin-top: -123px;"></div>
+        </div>
+      </div>
+
+      <img src="img/wxbg.png" alt="" class="erweima" v-show="erweima">
+      <!-- <img src="img/kfbg.png" alt="" class="kfbg" v-show="kfbg"> -->
+      <div class="qqbg" class="qqbg" v-show="qqbg">
+
+      </div>
+
+      <a href="home/index.html" style="position: absolute;width:217px;height:62px;top: 2150px;;left: 50%;margin-left: -108.5px;">
+        <img src="img/entergw.jpg" >
+      </a>
+      <div class="footer1">
+        <p>
+          温馨提示：抵制不良游戏，拒绝盗版游戏，注意自我保护，谨防受骗上当，适度游戏益脑，沉迷游戏伤身，合理安排时间，享受健康生活
+          <br/> 本网站所有游戏仅适合于年满18周岁以上的用户。如果您未满18周岁，不建议您注册并使用本网络游戏服务；
+          <br/> 如果您坚持使用，请您务必加入本网络游戏防沉迷系统进行实名注册，同时我们将会按照您法定监护人的需求提供您在本网络游戏中的信息。
+          <br/> 您在使用本网络游戏服务之前已经明确知晓网络游戏可能给您带来的一切潜在威胁，包括长时间游戏可能不利于您的身心健康等。为了您的健康请您合理的使用本网络游戏。
+        </p>
+
+        <p>京ICP备11034336号-1 |
+          <a target="_blank" href="/assets/files/huai_wenwangwen.jpg">
+            <font>京网文[2011]0744-272号 |</font>
+          </a>
+          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502033250">
+            <font><img src="http://www.beian.gov.cn/img/ghs.png">京公网安备 11010502033250号 |</font>
+          </a>
+          <a target="_blank" href="/assets/files/huai_xukezheng.pdf">
+            <font>（总）网出证（京）字第095号 |</font>
+          </a>
+          <a href="#">
+            <font>ICP证书号:京B2-20171148</font>
+          </a>
+        </p>
+        <p>
+          <a class="c_white" target="_blank" href="http://www.hulai.com/server">服务协议 |</a>
+          <a class="c_white" target="_blank" href="http://www.hulai.com/privacy">隐私权保护声明 |</a>
+          <a class="c_white" target="_blank" href="http://www.hulai.com/minors">未成年人家长监护 |</a>
+          <a class="c_white" target="_blank" href="http://www.hulai.com/law">法律声明 |</a>
+          <a class="c_white" target="_blank" href="http://www.hulai.com/dispute">纠纷、投诉</a>
+        </p>
+        <p>
+          北京市石景山区八大处高科技园区西井路3号3号楼9229房间 010-62662622
+        </p>
+        <p>
+          Copyright © 2015 Hoolai Games. All Rights Reserved | 互爱互动（北京）科技有限公司版权所有
+        </p>
+      </div>
+      <div class="footer">
+
+        <img src="img/phone.jpg" alt="" onclick="window.open('https://tieba.baidu.com/f?ie=utf-8&kw=%E5%85%83%E6%B0%94%E5%B0%81%E7%A5%9E');">
+        <img src="img/qq.jpg" alt="" @click="clickQqbg()">
+        <img src="img/weibo.jpg" alt="" onclick="window.open('http://weibo.com/u/6121688980');">
+        <img src="img/wechat.jpg" alt="" @click="clickBtn()">
+      </div>
+    </div>
+
+    <!-- <div class="cover" v-show="cover" @click="closeMc()"></div> -->
+    <!-- <div class="yuyue" v-show="yuyue">
+      <img src="img/cross.png" alt="" class="cross" @click="closeMc()">
+      <div class="top">
+        <p>选择手机系统:</p>
+        <button class="and" style='outline:none;' :class="{active: isAnd}" @click="chooseXT('android')">Android</button>
+        <button class="ios" style='outline:none;' :class="{active: isIos}" @click="chooseXT('ios')">iOS</button>
+      </div>
+      <div class="middle adjustment">
+        <input v-model="telephone" id="mobile" name="telephone" type="text" class="txt" placeholder="请输入手机号码" style='outline:none;' onfocus="this.placeholder=''" onblur="this.placeholder='输入手机号'">
+      </div>
+      <div class="bottom adjustment">
+        <input type="text" class="txt1" placeholder="请输入验证码" style='outline:none;' v-model="code" id="smscode" name="code" onfocus="this.placeholder=''" onblur="this.placeholder='输入验证码'">
+        <input v-bind:disabled="isDisabled" v-model="smsCodeVal" @click="sendSms(this)" type="button" class="yanzheng" name="name" style='outline:none;'>
+      </div>
+      <div class="last adjustment">
+        <button class="receive" style='outline:none;' @click="saveRecord()">立即提交</button>
+      </div>
+      <p class="people">已有<label id='total' v-model="total" style="color:#eb6949">{{total}}</label>名玩家预约成功</p>
+    </div> -->
+
+
+    <div class="dialog" v-show="show_dialog">
+      <div class="yuyue">
+        <img src="img/cross.png" alt="" class="cross" @click="closeMc()">
+        <div class="top">
+          <p>选择手机系统:</p>
+          <button class="and" style='outline:none;' :class="{active: isAnd}" @click="chooseXT('android')">Android</button>
+          <button class="ios" style='outline:none;' :class="{active: isIos}" @click="chooseXT('ios')">iOS</button>
+        </div>
+        <div class="middle adjustment">
+          <input v-model="telephone" id="mobile" name="telephone" type="text" class="txt" placeholder="请输入手机号码" style='outline:none;' onfocus="this.placeholder=''" onblur="this.placeholder='输入手机号'">
+        </div>
+        <div class="bottom adjustment">
+          <input type="text" class="txt1" placeholder="请输入验证码" style='outline:none;' v-model="code" id="smscode" name="code" onfocus="this.placeholder=''" onblur="this.placeholder='输入验证码'">
+          <input v-bind:disabled="isDisabled" v-model="smsCodeVal" @click="sendSms(this)" type="button" class="yanzheng" name="name" style='outline:none;'>
+        </div>
+        <div class="last adjustment">
+          <button class="receive" style='outline:none;' @click="saveRecord()">立即提交</button>
+        </div>
+        <p class="people">已有<label id='total' v-model="total" style="color:#eb6949">{{total}}</label>名玩家预约成功</p>
+      </div>
+      <!-- <div class="close" v-show="show_dialog" @click="closeDialog()"></div> -->
+    </div>
+    <div id="cover" v-show="show_dialog" @click="closeDialog()"></div>
+
+  </div>
+
+  <script>
+    (function(doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function() {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+  </script>
+
+  <script type="text/javascript" src="js/index.js?v=0.0.2"></script>
+  <script src="js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: 2500,
+      autoplayDisableOnInteraction: false,
+      loop: true,
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>《元气封神》官网，二次元神仙打架手游，河图音频怪物首次合体献唱主题曲</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta name="keywords" content="元气封神、河图、老妖、音频怪物、河图音频怪物、元气封神主题曲、元气封神OP">
+  <meta name="description" content="《元气封神》是一款融合了精致的东方美学和创新策略玩法的原创趣味卡牌游戏。">
+
+  <link rel="stylesheet" type="text/css" href="css/index.css?v=2017.11.06">
+  <link rel="stylesheet" type="text/css" href="css/lunbo.css?v=2017.11.06">
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="http://static.wdyxgames.com/common/js/swiper.min.js"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/hulai-activity-0.0.1.js?v=2017.10.24"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/isMobile.min.js?v=2017.10.24"></script>
+  <script type="text/javascript" src="http://page.hulai.com/static/open/js/vue-2.1.8.min.js"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/hulai-cms-0.0.1.js?v=2017.10.24"></script>
+  <script type="text/javascript">
+    if (isMobile.any) {
+      var goUrl = '/m/home/index.html';
+      var url = window.location.href;
+      var urlArr = url.split('?')
+      if (urlArr.length > 1) {
+        goUrl = goUrl + '?' + urlArr[1];
+      }
+      location.replace(goUrl);
+    }
+  </script>
+  <style>
+  .swiper-pagination-bullet {
+    width: 15px !important;
+    height: 15px !important;
+    display: inline-block !important;
+    border-radius: 100%;
+    margin-left: 53px !important;
+    margin-right: 53px !important;
+    /*opacity: .2;*/
+}
+.swiper-pagination-bullet-active{
+  background: #fff !important;
+}
+.swiper-pagination{
+  margin-top: 55px;
+  margin-left: 296px;
+}
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="main">
+      <nav>
+          <img class="icon" src="img/icon.png?v=20171104" alt="">
+          <ul class="nav_ul">
+            <li class="nav_active"><a href="javascript:;">官网首页</a></li>
+            <li><a target="_blank" href="list.html#xinwen">新闻中心</a></li>
+            <li><a target="_blank" href="xianren.html">仙人百科</a></li>
+            <li @click="dialogOpen()">主题活动</li>
+            <li><a target="_blank" href="https://tieba.baidu.com/f?kw=%D4%AA%C6%F8%B7%E2%C9%F1&fr=ala0&tpl=5">玩家论坛</a></li>
+            <li @click="dialogOpen()">元气画廊</li>
+          </ul>
+      </nav>
+      <!-- 预约、下载 -->
+      <div class="button auto">
+        <img class="erweima" src="img/erweima.png" alt="">
+          <div class="yuyue">
+             <!-- <a target="_blank" href="https://tracking.hoolai.com/tracking/5903/"><img class="ios1" src="img/ios.png" alt="" style="display:block;"></a> -->
+             <a href="javascript:void(0)" @click="clickYuyue()"><img class="android1" src="img/android.png?v=0.0.1" alt="" style="display:block;"></a>
+             <a href="http://l.taptap.com/u6SDKX5o"><img src="img/andTag.png?v=0.0.1" alt=""></a>
+          </div>
+          <a target="_blank" href="https://tracking.hoolai.com/tracking/5108/"><img class="ios1" src="img/ios.png?v=0.0.1" alt=""></a>
+        <a onclick="playVideo('http://cdn.yq.hulai.com/download/resource/Android/yqfsOPnew.mp4')" class="video_play"><img src="img/video.png" alt=""></a>
+      </div>
+      <!-- 遮罩层 -->
+      <div id="cover"></div>
+      <!-- 视频内容播放 -->
+      <div class="video_player">
+        <img src="img/close_video.png?v=2017.10.24" class="video_close">
+        <video id="video" width="640" height="360" src="" controls="controls">
+        无法支持html5浏览器
+      </video>
+      </div>
+      <!-- 轮播、资讯 -->
+      <div class="content" style="">
+        <div class="contentbg left" style="">
+        <iframe frameborder="0" scrolling="no" src="lunbotwo.html" style="width:610px;height:320px;"></iframe>
+      </div>
+        <div class="infor right">
+          <ul class="infor_ul">
+            <li class="infor_act" @click="goGetList('最新',1)">最新</li>
+            <li @click="goGetList('新闻',1)">新闻</li>
+            <li @click="goGetList('公告',1)">公告</li>
+            <li @click="goGetList('攻略',1)">攻略</li>
+            <li @click="goGetList('活动',1)">活动</li>
+          </ul>
+          <img src="img/xian.png" alt="" style="margin-left:12px;">
+          <ul class="list">
+            <li v-for="item in listData">
+              <a target="_blank" :href="item.hrefVal">
+                <span class="w400">
+                  <span><span>[</span>{{listName}}<span>]</span></span>
+                  <span>{{item.title}}</span>
+                </span>
+                <span class="fr_dis">{{item.updated}}</span>
+              </a>
+            </li>
+          </ul>
+          <a target="_blank" id="jumpToS" :href="more_href" style="width:17px;height:17px;color:#653c20;margin-left: 500px;">更多></a>
+        </div>
+      </div>
+      <!-- 角色· -->
+      <div class="character auto" style="">
+        <iframe frameborder="0" scrolling="no" src="lunbo.html" style="width:1189px;height:416px;"></iframe>
+      </div>
+      <!-- 游戏特色 -->
+      <div class="tese">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide t0"></div>
+            <div class="swiper-slide t1"></div>
+            <div class="swiper-slide t2"></div>
+            <div class="swiper-slide t3"></div>
+            <div class="swiper-slide t4"></div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-next swiper-button-white" style="background-image: url(img/next1.png?v=2017.10.24);width:45px;height:114px;background-size:45px 114px;top: 45%;right:80px"></div>
+        <div class="swiper-button-prev swiper-button-white" style="background-image: url(img/prev1.png?v=2017.10.24);width:45px;height:114px;background-size:45px 114px;top: 45%;left:80px;"></div> -->
+    </div>
+    <!-- footer -->
+      <div class="footer" style="font-size:12px;">
+        <!-- <img src="img/footer_pic.png" style="margin-bottom:10px"> -->
+        <div class="ui inverted segment">
+          <div class="ui container c_center">
+            <p>
+              温馨提示：抵制不良游戏，拒绝盗版游戏，注意自我保护，谨防受骗上当，适度游戏益脑，沉迷游戏伤身，合理安排时间，享受健康生活
+              <br/> 本网站所有游戏仅适合于年满18周岁以上的用户。如果您未满18周岁，不建议您注册并使用本网络游戏服务；
+              <br/> 如果您坚持使用，请您务必加入本网络游戏防沉迷系统进行实名注册，同时我们将会按照您法定监护人的需求提供您在本网络游戏中的信息。
+              <br/> 您在使用本网络游戏服务之前已经明确知晓网络游戏可能给您带来的一切潜在威胁，包括长时间游戏可能不利于您的身心健康等。为了您的健康请您合理的使用本网络游戏。
+            </p>
+
+            <p>京ICP备11034336号-1 |
+              <a target="_blank" href="http://www.hulai.com/assets/files/huai_wenwangwen.jpg">
+                <font color="#fff">京网文[2011]0744-272号 |</font>
+              </a>
+              <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502033250">
+                <font color="#fff"><img src="http://www.beian.gov.cn/img/ghs.png">京公网安备 11010502033250号 |</font>
+              </a>
+              <a target="_blank" href="http://www.hulai.com/assets/files/huai_xukezheng.pdf">
+                <font color="#fff">（总）网出证（京）字第095号 |</font>
+              </a>
+              <a href="#">
+                <font color="#fff">ICP证书号:京B2-20171148</font>
+              </a>
+            </p>
+            <p>
+              <a class="c_white" target="_blank" href="http://www.hulai.com/server" style="color:#fff">服务协议 |</a>
+              <a class="c_white" target="_blank" href="http://www.hulai.com/privacy" style="color:#fff">隐私权保护声明 |</a>
+              <a class="c_white" target="_blank" href="http://www.hulai.com/minors" style="color:#fff">未成年人家长监护 |</a>
+              <a class="c_white" target="_blank" href="http://www.hulai.com/law" style="color:#fff">法律声明 |</a>
+              <a class="c_white" target="_blank" href="http://www.hulai.com/dispute" style="color:#fff">纠纷、投诉</a>
+            </p>
+            <p>
+              北京市石景山区八大处高科技园区西井路3号3号楼9229房间 010-62662622
+            </p>
+            <p>
+              Copyright © 2015 Hoolai Games. All Rights Reserved | 互爱互动（北京）科技有限公司版权所有
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+   <!-- 浮窗 -->
+    <div class="fixed_dialog">
+      <img class="shouzhan left" src="img/shouqi.png" alt="">
+      <div class="furight right">
+        <a target="_blank" href="https://tieba.baidu.com/f?kw=%D4%AA%C6%F8%B7%E2%C9%F1&fr=ala0&tpl=5" style="width: 155px;height: 40px;display: block;margin-top: 265px;"></a>
+        <a target="_blank" href="https://weibo.com/u/6121688980?ssl_rnd=1509591664.2689" style="width: 155px;height: 40px;display: block;"></a>
+        <a target="_blank" href="http://tieba.baidu.com/f?kw=%E8%83%A1%E8%8E%B1%E4%B8%89%E5%9B%BD2&fr=index&red_tag=e1860452855" style="width: 186px;height: 48px;position: relative;top: 375px;right:-26px;cursor:pointer"></a>
+        <a target="_blank" href="http://weibo.com/hulaisanguo2" style="width: 186px;height: 48px;position: relative;top: 374px;right:-26px;cursor: pointer;"></a>
+      </div>
+     
+    </div>
+   <!-- 弹窗 -->
+      <div class="dialog" v-show="dialog">
+        <div class="close"  @click="dialogClose()"></div>
+      </div>
+    <!-- 蒙层 -->
+    <div id="cover2" v-show="cover2" @click="closeYuyue()"></div>
+    <!-- 预约 -->
+    <div class="yy" v-show="yuyue">
+      <div class="yybg">
+        <div class="content_yuyue">
+          <div class="left_yuyue">
+            <img src="img/erweima.jpg?v=0.0.7">
+            <span>扫一扫关注</span>
+          </div>
+          <div class="right_yuyue">
+            <div class="disf">
+              <div style="padding-top: 8px;color: #426b9f;font-size:16px;margin-right: 38px;">选择手机系统：</div>
+              <div class="cursorP android" v-bind:class="{active: isAndroidActive}" @click="chooseXT('android')">Android</div>
+              <div class="cursorP ios" v-bind:class="{active: isiOSActive}" @click="chooseXT('ios')">iOS</div>
+            </div>
+            <input v-model="telephone" class="telephone mt10" type="text" name="telephone" placeholder="请输入手机号码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入手机号码'">
+            <div class="disf mt10">
+              <input v-model="code" class="code" type="text" name="code" placeholder="请输入验证码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入验证码'">
+              <input v-bind:disabled="isDisabled" v-model="smsCodeVal" @click="sendSms(this)" v-bind:class="{grayBg:isGrayBg}" type="button" class="yanzheng cursorP" name="name">
+            </div>
+            <div class="yyyx mt10 cursorP" @click="saveRecord()">预约游戏</div>
+            <div style="color:#999999;font-size:15px;text-align:center;margin-top: 15px;">已有<span style="color:#eb6949">{{totalNum}}</span>名玩家预约!</div>
+          </div>
+        </div>
+        <div class="cross" @click="closeYuyue()"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/common.js?v=2017.10.24"></script>
+  <script src="js/index.js?v=2017.10.24"></script>
+  <script src="js/indexVue.js?v=2017.10.24"></script>
+ <script>
+    $(document).ready(function() {
+      //轮播
+      window.teseSwiper = $(".tese .swiper-container").swiper({
+        slidesPerView: 3,
+        // speed: 500,
+        prevButton: '.swiper-button-prev',
+        nextButton: '.swiper-button-next',
+        effect: "coverflow",
+        centeredSlides: !0,
+        slidesPerView: "auto",
+        autoplay: 3000,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        coverflow: {
+          rotate: 0,
+          stretch: 0,
+          depth: 300,
+          modifier: 1
+        },
+        loop: !0
+      });
+      //改变尺寸后刷新轮播
+      $(window).resize(function(event) {
+        setTimeout("teseSwiper.update();teseSwiper.slideNext();", 500);
+      });
+    });
+  </script>
+</body>
+
+</html>

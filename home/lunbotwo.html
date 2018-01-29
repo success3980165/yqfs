@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+   <!-- Swiper JS -->
+  <script src="js/swiper.min.js"></script>
+  <script src="http://static.wdyxgames.com/common/js/swiper.min.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="http://page.hulai.com/static/open/js/vue-2.1.8.min.js"></script>
+
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    /*.swiper-slide a {
+      height: 425px;
+    }*/
+    .voice{
+      position: absolute;
+      width: 210px;
+      height: 54px;
+      top: 5px;
+      left: 0;
+      cursor: pointer;
+      z-index: 100;
+      border: 1px solid red
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a target="_top" href="article.html#1585">
+          <img src="img/a.jpg">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a target="_top" href="http://yqfs.hulai.com/">
+          <img src="img/b.jpg">
+        </a>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: 2500,
+      autoplayDisableOnInteraction: false,
+      loop: true
+    });
+  </script>
+</body>
+
+</html>

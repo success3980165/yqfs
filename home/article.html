@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>《元气封神》官网，二次元神仙打架手游，河图音频怪物首次合体献唱主题曲</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta name="keywords" content="元气封神、河图、老妖、音频怪物、河图音频怪物、元气封神主题曲、元气封神OP">
+  <meta name="description" content="《元气封神》是一款融合了精致的东方美学和创新策略玩法的原创趣味卡牌游戏。">
+  <link rel="stylesheet" type="text/css" href="css/secondThird.css?v=2017.10.25">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/common.js?v=2017.10.25"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/hulai-activity-0.0.1.js?v=2017.10.25"></script>
+  <script type="text/javascript" src="http://page.hulai.com/static/open/js/vue-2.1.8.min.js"></script>
+	<script type="text/javascript" src="//page.hulai.com/static/open/js/hulai-cms-0.0.1.js?v=2017.10.25"></script>
+</head>
+
+<body>
+  <div id="app" v-cloak>
+  <div class="bg6">
+   <nav>
+          <img class="icon" src="img/icon.png?v=20171104" alt="">
+          <ul class="nav_ul">
+            <li class="nav_active"><a href="index.html">官网首页</a></li>
+            <li><a target="_blank" href="list.html#xinwen">新闻中心</a></li>
+            <li><a target="_blank" href="xianren.html">仙人百科</a></li>
+            <li @click="dialogOpen()">主题活动</li>
+            <li><a target="_blank" href="https://tieba.baidu.com/f?kw=%D4%AA%C6%F8%B7%E2%C9%F1&fr=ala0&tpl=5">玩家论坛</a></li>
+            <li @click="dialogOpen()">元气画廊</li>
+          </ul>
+      </nav>
+    <div style="position: absolute;top: 650px;width: 1000px;">
+    </div>
+  </div>
+  <div class="content">
+    <div class="w8000">
+      <div>
+        <p id="article_title">{{article_title}}</p>
+      </div>
+      <div>
+        <p id="article_time">{{article_time}}</p>
+      </div>
+      <div id="article_content" v-html="article_content">{{article_content}}</div>
+    </div>
+    <div class="bg3">
+      <div class="footer" style="text-align:center;">
+          <div class="ui inverted segment">
+            <div class="ui container c_center">
+              <p>
+                温馨提示：抵制不良游戏，拒绝盗版游戏，注意自我保护，谨防受骗上当，适度游戏益脑，沉迷游戏伤身，合理安排时间，享受健康生活
+                <br/>
+                本网站所有游戏仅适合于年满18周岁以上的用户。如果您未满18周岁，不建议您注册并使用本网络游戏服务；
+                <br/>
+                如果您坚持使用，请您务必加入本网络游戏防沉迷系统进行实名注册，同时我们将会按照您法定监护人的需求提供您在本网络游戏中的信息。
+                <br/>
+                您在使用本网络游戏服务之前已经明确知晓网络游戏可能给您带来的一切潜在威胁，包括长时间游戏可能不利于您的身心健康等。为了您的健康请您合理的使用本网络游戏。
+              </p>
+
+              <p>京ICP备11034336号-1 |
+                <a target="_blank" href="http://www.hulai.com/assets/files/huai_wenwangwen.jpg">
+                  <font color="#f5dda9">京网文[2011]0744-272号 |</font>
+                </a>
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502033250">
+                  <font color="#f5dda9"><img src="http://www.beian.gov.cn/img/ghs.png">京公网安备 11010502033250号 |</font>
+                </a>
+                <a target="_blank" href="http://www.hulai.com/assets/files/huai_xukezheng.pdf">
+                  <font color="#f5dda9">（总）网出证（京）字第095号 |</font>
+                </a>
+                <a href="#">
+                  <font color="#f5dda9">ICP证书号:京B2-20171148</font>
+                </a>
+              </p>
+              <p>
+                <a class="c_white" target="_blank" href="http://www.hulai.com/server" style="color:#f5dda9">服务协议 |</a>
+                <a class="c_white" target="_blank" href="http://www.hulai.com/privacy" style="color:#f5dda9">隐私权保护声明 |</a>
+                <a class="c_white" target="_blank" href="http://www.hulai.com/minors" style="color:#f5dda9">未成年人家长监护 |</a>
+                <a class="c_white" target="_blank" href="http://www.hulai.com/law" style="color:#f5dda9">法律声明 |</a>
+                <a class="c_white" target="_blank" href="http://www.hulai.com/dispute" style="color:#f5dda9">纠纷、投诉</a>
+              </p>
+              <p>
+                北京市石景山区八大处高科技园区西井路3号3号楼9229房间 010-62662622
+              </p>
+              <p>
+                Copyright © 2015 Hoolai Games. All Rights Reserved | 互爱互动（北京）科技有限公司版权所有
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+      <div class="dialog" v-show="dialog">
+        <div class="close"  @click="dialogClose()"></div>
+      </div>
+    <!-- 蒙层 -->
+      <div id="cover2" v-show="cover2"></div>
+  </div>
+<script src="js/indexVue.js?v=2017.10.25"></script>
+</body>
+</html>

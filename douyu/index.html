@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>元气封神-萌神集结冲破次元！公测预约开启</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta name="keywords" content="元气封神,元气,封神,封神榜,封神演义,封神召唤师,召唤师,召唤,二次元,立绘,国风,国漫,元气封神手游,封神召唤师手游,封神手游,阴阳师,式神,穿越,卡牌,策略,炉石传说,炉石,CR,皇室战争,三国杀,影之诗,实时对战,女娲,女娲娘娘,妲己,纣王,姜子牙,姜太公,姜尚,姬发,燃灯,燃灯道人,杨戬,二郎神,龙吉公主,龙吉,敖寸心,哪吒,托塔天王,李靖,雷震子,太乙,太乙真人,元始天尊,烛龙,四不像,闻太师,闻仲,申公豹,道友请留步,斩仙飞刀,陆压道人,陆压,请宝贝转身,打神鞭,姬昌,周文王,周武王,龙须虎,土行孙,狐狸精,比干,哼哈二将,四大天王,云中子,阎王,孟婆,旱魃,CV">
+  <meta name="description" content="《元气封神》是一款二次元萌神冒险策略手游，融合精致东方美学与创新策略玩法。众多一线画师加盟，倾力打造国风魅力，数十位性格各异封神人物，上阵斗法！独创实时竞技与回合策略玩法完美结合，一分钟上手、三分钟一局，即刻体验全新对战乐趣！冲破次元，萌神集结！">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/index.css?v=0.0.4"></link>
+  <script type="text/javascript" src="http://s0.web.hulai.com/static/jquery/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="http://page.hulai.com/static/open/js/vue-2.1.8.min.js"></script>
+  <script type="text/javascript" src="http://activity.api.hulai.com/static/open/js/hulai-activity-0.0.1.js"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/hulai-cms-0.0.1.js?v=0.0.4"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/isMobile.min.js"></script>
+  <!-- <script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script> -->
+  <script type="text/javascript">
+    if (isMobile.any) {
+      var goUrl = '/douyu/h5/';
+      var url = window.location.href;
+      var urlArr = url.split('?')
+      if (urlArr.length > 1) {
+        goUrl = goUrl + '?' + urlArr[1];
+      }
+      location.replace(goUrl);
+    }
+  </script>
+
+</head>
+
+<body>
+  <!-- 背景花瓣  -->
+  <div id="app" v-cloak>
+     <!-- 背景视频 -->
+      <div style="height:700px;position:relative;text-align:center">
+        <video autoplay loop id="video_bg" poster="img/topbg2.jpeg">
+          <source src="http://webcdn.hulai.com/video/1504861356074.webm" type="video/webm">
+          <source src="http://webcdn.hulai.com/video/1504861340312.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div style="text-align:center" class="pcbg" class="bg">
+      <!-- 分享 -->
+      <ul class="share">
+        <li><a onclick="window.open('https://tieba.baidu.com/f?ie=utf-8&kw=%E5%85%83%E6%B0%94%E5%B0%81%E7%A5%9E');"><img src="img/phone.png" alt="" @mouseleave="mouseleaveKefu"></a></li>
+        <li><img src="img/qq.png" alt="" @click="mouseenterQqbg"></li>
+        <li><a onclick="window.open('http://weibo.com/u/6121688980');"><img src="img/weibo.png" alt=""></a></li>
+        <li><img src="img/weChat.png" alt="" @click="mouseenterKefu"></li>
+      </ul>
+      <img src="img/wxbg.png" alt="" class="kefu" v-show="kefu">
+      <div src="img/qqbg.png" alt="" class="qqbg" v-show="qqbg">
+      </div>
+
+      <!-- 礼包 -->
+
+      <div class="gift">
+          <!-- <img style="width:100%" src="img/libao2.png" alt=""> -->
+          <div style="color:#c06205;font-size: 15px;margin-top: 16%;width:17%;display: inline-block;float: left;margin-left: 9%;">
+          已有<span style="color:#eb6949">{{totalNum}}</span>名玩家预约!
+          </div>
+          <div class="success">
+            <img src="img/dacheng.png" alt="" style="" v-show="successOne">
+            <img src="img/dacheng.png" alt="" style="" v-show="successTwo">
+            <img src="img/dacheng.png" alt="" style="" v-show="successThree">
+          </div>
+      </div>
+
+      <!-- 预约按钮 -->
+      <img src="img/btn.png" @click="popYuyue()" class="now_yuyue cursorP">
+      
+      <!-- 角色 -->
+      <img src="img/role.png" alt="" class="role">
+      <ul class="person">
+        <li :class="{ 'cur': isChecked == 1 }" @click="clickXumian">徐眠</li><span>|</span>
+        <li :class="{ 'cur': isChecked == 2 }" @click="clickJiangziya">姜子牙</li><span>|</span>
+        <li :class="{ 'cur': isChecked == 3 }" @click="clickYangjian">杨戬</li><span>|</span>
+        <li :class="{ 'cur': isChecked == 4 }" @click="clickAocunxin">敖寸心</li><span>|</span>
+        <li :class="{ 'cur': isChecked == 5 }" @click="clickZhouwang">纣王</li><span>|</span>
+        <li :class="{ 'cur': isChecked == 6 }" @click="clickDaji">妲己</li><span>|</span>
+        <li :class="{ 'cur': isChecked == 7 }" @click="clickJifa">姬发</li><span>|</span>
+        <li :class="{ 'cur': isChecked == 8 }" @click="clickRandeng">燃灯</li>
+      </ul>
+      <div class="switch">
+        <img src="img/xuemian.png" alt="" v-show="xueMian">
+        <img src="img/jiangziya.png" alt="" v-show="jiangZiYa">
+        <img src="img/yangjian.png" alt="" v-show="yangJian">
+        <img src="img/aocunxin.png" alt="" v-show="aoCunXin">
+        <img src="img/zhouwang.png" alt="" v-show="zhouWang">
+        <img src="img/daji.png" alt="" v-show="daJi">
+        <img src="img/jifa.png" alt="" v-show="jiFa">
+        <img src="img/randeng.png" alt="" v-show="ranDeng">
+      </div>
+      <!-- <div class="footer">
+        <p>Copyright @2017 Hoolai Game ALL rights reserved. | 互爱互动（北京）科技有限公司版权所有</p>
+        <p>京ICP备11034336号-1 网络文化经营许可证-文网文[2011]0744-272号</p>
+      </div> -->
+    </div>
+    <!-- 预约弹框 -->
+    <div class="yuyue_dialog" v-show="popYuyueShow">
+      <div class="close_pop cursorP" @click="closePop()"></div>
+      <div class="content">
+        <div class="left">
+          <img src="img/erweima.jpg">
+          <span>扫一扫关注</span>
+        </div>
+        <div class="right">
+          <div class="disf">
+            <div style="padding-top: 8px;color: #426b9f;font-size:16px">选择手机系统：</div>
+            <div class="cursorP android" v-bind:class="{active: isAndroidActive}" @click="chooseXT('android')">Android</div>
+            <div class="cursorP ios" v-bind:class="{active: isiOSActive}" @click="chooseXT('ios')">iOS</div>
+          </div>
+          <input v-model="telephone" class="telephone mt10" type="text" name="telephone" placeholder="请输入手机号码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入手机号码'">
+          <div class="disf mt10">
+            <input v-model="code" class="code" type="text" name="code" placeholder="请输入验证码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入验证码'">
+            <input v-bind:disabled="isDisabled" v-model="smsCodeVal" @click="sendSms(this)" v-bind:class="{grayBg:isGrayBg}" type="button" class="yanzheng cursorP" name="name">
+          </div>
+          <div class="yyyx mt10 cursorP" @click="saveRecord()">预约游戏</div>
+          <div style="color:#426b9f;font-size:15px;text-align:center;margin-top: 15px;">已有<span style="color:#eb6949">{{totalNum}}</span>名玩家预约!</div>
+        </div>
+      </div>
+    </div>
+    <div id="cover" v-show="popYuyueShow"></div>
+  </div>
+  <script src="js/index.js?v=0.0.4"></script>
+</body>
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script> 
+  <script type="text/javascript" src="js/snowfall.jquery.js"></script> 
+  <script type="text/javascript">
+    $(document).snowfall('clear');
+    $(document).snowfall({
+      image: "img/huaban.png",
+      flakeCount:15,
+      minSize: 5,
+      maxSize: 22
+    });
+  </script>
+</html>

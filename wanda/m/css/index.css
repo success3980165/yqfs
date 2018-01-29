@@ -1,0 +1,167 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+// html {
+//   font-size: 40px;
+// }
+.container {
+  background: url(../img/bg2.jpg) no-repeat center top;
+  width: 640px;
+  height: 1136px;
+  position: relative;
+  z-index: 999;
+}
+// video {
+//   position: absolute;
+//   right: 0px;
+//   // bottom: 0px;
+//   min-width: 100%;
+//   min-height: 100%;
+//   width: auto;
+//   height: auto;
+//   z-index: -9999;
+// }
+.mid {
+  width: 8.1rem;
+  text-align: center;
+  margin:0px auto;
+  position: relative;
+  top: 18rem;
+  padding-left: 24px;
+}
+.mid img {
+  display: inline-block;
+}
+.weixin {
+  margin-right: 30px;
+}
+.cover {
+    position: fixed;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: #000;
+}
+.yuyue {
+  background: url(../img/yuyue.png) no-repeat center top;
+  width: 15.5rem;
+  height: 16rem;
+  position: fixed;
+  top: 240px;
+  left: 10px;
+  z-index: 999;
+}
+.cross {
+  float: right;
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 85px;
+}
+.top {
+  width: 470px;
+  height: 55px;
+  margin:0px auto;
+  margin-top: 20px;
+  font-size:0.6rem;
+  margin-top: 170px;
+}
+.top p{
+  float: left;
+  margin-top: 10px;
+  color: #426b9f;
+}
+.and {
+  display: inline-block;
+  width: 155px;
+  height: 52px;
+  float: left;
+  border: solid 1px #eb6949;
+  border-radius: 50px 0px 0px 50px;
+  background-color: #fff;
+  color: #999999;
+  font-size: 16.11px;
+  margin-left: 20px;
+}
+.ios {
+  display: inline-block;
+  width: 114px;
+  height: 52px;
+  float: left;
+  background: white;
+  border: 1px solid #eb6949;
+  border-radius: 0px 50px 50px 0px;
+  color: #999999;
+  font-size: 16.11px;
+  margin-left: 20px;
+}
+.middle {
+  width: 470px;
+  margin:0px auto;
+
+}
+.txt {
+  width: 470px;
+  height: 52px;
+  border-radius: 30px;
+  border: none;
+  text-align: center;
+  font-size: 18.67px;
+}
+.bottom {
+  width: 470px;
+  margin:0px auto;
+}
+.txt1 {
+  width: 263px;
+  height: 52px;
+  border-radius: 30px 0px 0px 30px;
+  border: none;
+  text-align: center;
+  font-size: 18.67px;
+}
+.yanzheng {
+  width: 188px;
+  height: 52px;
+  border-radius: 0px 30px 30px 0px;
+  border: none;
+  font-size: 18.67px;
+  background: #426b9f;
+  color: white;
+}
+.last {
+  width: 470px;
+  margin:0px auto;
+}
+.receive {
+  width: 470px;
+  height: 52px;
+  font-size: 18.67px;
+  color:white;
+  text-align:center;
+  background: #eb6949;
+  border-radius: 30px;
+  border:none;
+}
+.people {
+  width: 470px;
+  margin:0px auto;
+  font-size: 18.67px;
+  text-align: center;
+  color: #426b9f;
+  margin-top: 30px;
+}
+.adjustment {
+  margin-top: 12px;
+}
+.flower {
+  position: absolute;
+  top: 73%;
+}
+.active{
+  background-color: #eb6949;
+  color: #fff5e0;
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>元气封神-萌神集结冲破次元！公测预约开启</title>
+  <meta name="keywords" content="元气封神,元气,封神,封神榜,封神演义,封神召唤师,召唤师,召唤,二次元,立绘,国风,国漫,元气封神手游,封神召唤师手游,封神手游,阴阳师,式神,穿越,卡牌,策略,炉石传说,炉石,CR,皇室战争,三国杀,影之诗,实时对战,女娲,女娲娘娘,妲己,纣王,姜子牙,姜太公,姜尚,姬发,燃灯,燃灯道人,杨戬,二郎神,龙吉公主,龙吉,敖寸心,哪吒,托塔天王,李靖,雷震子,太乙,太乙真人,元始天尊,烛龙,四不像,闻太师,闻仲,申公豹,道友请留步,斩仙飞刀,陆压道人,陆压,请宝贝转身,打神鞭,姬昌,周文王,周武王,龙须虎,土行孙,狐狸精,比干,哼哈二将,四大天王,云中子,阎王,孟婆,旱魃,CV">
+  <meta name="description" content="《元气封神》是一款二次元萌神冒险策略手游，融合精致东方美学与创新策略玩法。众多一线画师加盟，倾力打造国风魅力，数十位性格各异封神人物，上阵斗法！独创实时竞技与回合策略玩法完美结合，一分钟上手、三分钟一局，即刻体验全新对战乐趣！冲破次元，萌神集结！">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/index.css?v=0.0.2"></link>
+  <script type="text/javascript" src="http://s0.web.hulai.com/static/jquery/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="http://page.hulai.com/static/open/js/vue-2.1.8.min.js"></script>
+  <script type="text/javascript" src="http://activity.api.hulai.com/static/open/js/hulai-activity-0.0.1.js"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/hulai-cms-0.0.1.js?v=0.0.2"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/isMobile.min.js"></script>
+  <script type="text/javascript">
+    if (isMobile.any) {
+      var goUrl = '/wanda/m/';
+      var url = window.location.href;
+      var urlArr = url.split('?')
+      if (urlArr.length > 1) {
+        goUrl = goUrl + '?' + urlArr[1];
+      }
+      location.replace(goUrl);
+    }
+  </script>
+
+</head>
+
+<body>
+  <div id="app" v-cloak>
+    <!-- 背景视频 -->
+    <div style="width:100%;height:100%;position:relative;text-align:center">
+      <video autoplay loop id="video_bg" poster="img/bg.png">
+        <source src="http://cdn.hoolaiimg.com/video/1501208288358.webm" type="video/webm">
+        <source src="http://cdn.hoolaiimg.com/video/1501208334950.mp4" type="video/mp4">
+      </video>
+      <img src="img/center_bg.png" class="center_bg">
+      <img src="img/btn.png" @click="popYuyue()" class="now_yuyue cursorP">
+
+    </div>
+    <!-- 预约弹框 -->
+    <div class="yuyue_dialog" v-show="popYuyueShow">
+      <div class="close_pop cursorP" @click="closePop()"></div>
+      <div class="content">
+        <div class="left">
+          <img src="img/erweima.jpg">
+          <span>扫一扫关注</span>
+        </div>
+        <div class="right">
+          <div class="disf">
+            <div style="padding-top: 8px;color: #426b9f;font-size:16px">选择手机系统：</div>
+            <div class="cursorP android" v-bind:class="{active: isAndroidActive}" @click="chooseXT('android')">Android</div>
+            <div class="cursorP ios" v-bind:class="{active: isiOSActive}" @click="chooseXT('ios')">iOS</div>
+          </div>
+          <input v-model="telephone" class="telephone mt10" type="text" name="telephone" placeholder="请输入手机号码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入手机号码'">
+          <div class="disf mt10">
+            <input v-model="code" class="code" type="text" name="code" placeholder="请输入验证码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入验证码'">
+            <input v-bind:disabled="isDisabled" v-model="smsCodeVal" @click="sendSms(this)" v-bind:class="{grayBg:isGrayBg}" type="button" class="yanzheng cursorP" name="name">
+          </div>
+          <div class="yyyx mt10 cursorP" @click="saveRecord()">预约游戏</div>
+          <div style="color:#426b9f;font-size:15px;text-align:center;margin-top: 15px;">已有<span style="color:#eb6949">{{totalNum}}</span>名玩家预约!</div>
+        </div>
+      </div>
+    </div>
+    <div id="cover" v-show="popYuyueShow"></div>
+  </div>
+  <script src="js/index.js?v=0.0.4"></script>
+</body>
+
+</html>

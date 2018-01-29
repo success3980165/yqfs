@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+   <!-- Swiper JS -->
+  <script src="js/swiper.min.js"></script>
+  <script src="http://static.wdyxgames.com/common/js/swiper.min.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="http://page.hulai.com/static/open/js/vue-2.1.8.min.js"></script>
+
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      /*background: #eee;*/
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide a {
+      height: 425px;
+    }
+    .voice{
+      position: absolute;
+      width: 237px;
+      height: 54px;
+      top: 5px;
+      left: 81px;
+      cursor: pointer;
+      z-index: 100;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Swiper -->
+  <div class="swiper-container lunbo2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide lunbo1" style="background:url(img/ancunxin.png) no-repeat;">
+              <div class="voice" onclick="play1()">
+                  <audio id="xqt1" src = "http://webcdn.hulai.com/video/1509971735428.mp3">
+              你的浏览器不支持audio标签（aocunxin）
+                  </audio>
+              </div>
+            </div>
+            <div class="swiper-slide lunbo1" style="background:url(img/daji.png) no-repeat;">
+              <div class="voice" onclick="play2()">
+                  <audio id="xqt2" src = "http://webcdn.hulai.com/video/1509971736489.mp3">
+              你的浏览器不支持audio标签daji
+                  </audio>
+              </div>
+            </div>
+            <div class="swiper-slide lunbo1" style="background:url(img/hengjiang.png) no-repeat;">
+              <div class="voice" onclick="play3()">
+                  <audio id="xqt3" src = "http://webcdn.hulai.com/video/1509971737628.mp3">
+              你的浏览器不支持audio标签hengjiang
+                  </audio>
+              </div>
+            </div>
+            <div class="swiper-slide lunbo1" style="background:url(img/jiangziya.png) no-repeat;">
+              <div class="voice" onclick="play4()">
+                  <audio id="xqt4" src = "http://webcdn.hulai.com/video/1509971739188.mp3">
+              你的浏览器不支持audio标签jingziya
+                  </audio>
+              </div>
+            </div>
+            <div class="swiper-slide lunbo1" style="background:url(img/jifa.png) no-repeat;">
+              <div class="voice" onclick="play5()">
+                  <audio id="xqt5" src = "http://webcdn.hulai.com/video/1509971739969.mp3">
+              你的浏览器不支持audio标签jifa
+                  </audio>
+              </div>
+            </div>
+            <div class="swiper-slide lunbo1" style="background:url(img/randeng.png) no-repeat;">
+              <div class="voice" onclick="play6()">
+                  <audio id="xqt6" src = "http://webcdn.hulai.com/video/1509971740778.mp3">
+              你的浏览器不支持audio标签randeng
+                  </audio>
+              </div>
+            </div>
+            <div class="swiper-slide lunbo1" style="background:url(img/yuanshitianzun.png) no-repeat;">
+              <div class="voice" onclick="play7()">
+                  <audio id="xqt7" src = "http://webcdn.hulai.com/video/1509971742178.mp3">
+              你的浏览器不支持audio标签yuanshi
+                  </audio>
+              </div>
+            </div>
+            <div class="swiper-slide lunbo1" style="background:url(img/zhouwang.png) no-repeat;">
+              <div class="voice" onclick="play8()">
+                  <audio id="xqt8" src = "http://webcdn.hulai.com/video/1509971742859.mp3">
+              你的浏览器不支持audio标签zhouwang
+                  </audio>
+              </div>
+            </div>
+            <div class="swiper-slide lunbo1" style="background:url(img/xumian.png) no-repeat;">
+              <div class="voice" onclick="play9()">
+                  <audio id="xqt9" src = "http://webcdn.hulai.com/video/1509971744438.mp3">
+              你的浏览器不支持audio标签xumian
+                  </audio>
+              </div>
+            </div>
+            <div class="swiper-slide lunbo1" style="background:url(img/yangjian.png) no-repeat;">
+              <div class="voice" onclick="play10()">
+                  <audio id="xqt10" src = "http://webcdn.hulai.com/video/1509971745338.mp3">
+              你的浏览器不支持audio标签yangjian
+                  </audio>
+              </div>
+            </div>
+            <div class="swiper-slide lunbo1" style="background:url(img/zhulong.png) no-repeat;">
+              <div class="voice" onclick="play11()">
+                  <audio id="xqt11" src = "http://webcdn.hulai.com/video/1509971746608.mp3">
+              你的浏览器不支持audio标签zhulong
+                  </audio>
+              </div>
+            </div>
+            <div class="swiper-slide lunbo1" style="background:url(img/yudingzhenren.png) no-repeat;">
+              <div class="voice" onclick="play12()">
+                  <audio id="xqt12" src = "http://webcdn.hulai.com/video/1509971747608.mp3">
+              你的浏览器不支持audio标签yuding
+                  </audio>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-button-white" style="background-image:url(img/next.png);margin-top: -79px;width: 44px;height: 127px;background-size: 100% 100%;"></div>
+          <div class="swiper-button-prev swiper-button-white" style="background-image:url(img/prev.png);margin-top: -79px;width: 44px;height: 127px;background-size: 100% 100%;"></div>
+        </div>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    // autoplay: 2500,
+    autoplayDisableOnInteraction: false,
+    loop: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+  })
+  </script>
+  <script>
+  var isPlaying = false;
+  function play1() {
+    var player = document.getElementById('xqt1');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+  function play2() {
+    var player = document.getElementById('xqt2');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+  function play3() {
+    var player = document.getElementById('xqt3');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+  function play4() {
+    var player = document.getElementById('xqt4');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+  function play5() {
+    var player = document.getElementById('xqt5');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+  function play6() {
+    var player = document.getElementById('xqt6');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+  function play7() {
+    var player = document.getElementById('xqt7');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+  function play8() {
+    var player = document.getElementById('xqt8');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+  function play9() {
+    var player = document.getElementById('xqt9');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+  function play10() {
+    var player = document.getElementById('xqt10');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+  function play11() {
+    var player = document.getElementById('xqt11');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+  function play12() {
+    var player = document.getElementById('xqt12');
+    if (isPlaying) {
+      isPlaying = false;
+      player.pause();
+      // player.src = '';
+    } else {
+      // player.src = 'http://cdn.hoolaiimg.com/video/1497859589603.mp3';
+      player.play();
+      isPlaying = true;
+    }
+  }
+
+</script>
+</body>
+
+</html>

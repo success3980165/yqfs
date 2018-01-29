@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>《元气封神》官网，二次元神仙打架手游，河图音频怪物首次合体献唱主题曲</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta name="keywords" content="元气封神,元气,封神,封神榜,封神演义,封神召唤师,召唤师,召唤,二次元,立绘,国风,国漫,元气封神手游,封神召唤师手游,封神手游,阴阳师,式神,穿越,卡牌,策略,炉石传说,炉石,CR,皇室战争,三国杀,影之诗,实时对战,女娲,女娲娘娘,妲己,纣王,姜子牙,姜太公,姜尚,姬发,燃灯,燃灯道人,杨戬,二郎神,龙吉公主,龙吉,敖寸心,哪吒,托塔天王,李靖,雷震子,太乙,太乙真人,元始天尊,烛龙,四不像,闻太师,闻仲,申公豹,道友请留步,斩仙飞刀,陆压道人,陆压,请宝贝转身,打神鞭,姬昌,周文王,周武王,龙须虎,土行孙,狐狸精,比干,哼哈二将,四大天王,云中子,阎王,孟婆,旱魃,CV">
+  <meta name="description" content="《元气封神》是一款二次元萌神冒险策略手游，融合精致东方美学与创新策略玩法。众多一线画师加盟，倾力打造国风魅力，数十位性格各异封神人物，上阵斗法！独创实时竞技与回合策略玩法完美结合，一分钟上手、三分钟一局，即刻体验全新对战乐趣！冲破次元，萌神集结！">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/index.css?v=0.0.9"></link>
+  <script type="text/javascript" src="http://s0.web.hulai.com/static/jquery/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="http://page.hulai.com/static/open/js/vue-2.1.8.min.js"></script>
+  <script type="text/javascript" src="http://activity.api.hulai.com/static/open/js/hulai-activity-0.0.1.js"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/hulai-cms-0.0.1.js?v=0.0.4"></script>
+  <script type="text/javascript" src="//page.hulai.com/static/open/js/isMobile.min.js"></script>
+  <!-- <script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script> -->
+  <script type="text/javascript">
+    if (isMobile.any) {
+      var goUrl = '/m/';
+      var url = window.location.href;
+      var urlArr = url.split('?')
+      if (urlArr.length > 1) {
+        goUrl = goUrl + '?' + urlArr[1];
+      }
+      location.replace(goUrl);
+    }
+  </script>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3bb26f02a14917a88ab6e713c63ef2b6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+  <!-- 背景花瓣  -->
+  <div id="app" v-cloak>
+    <!-- 背景header -->
+    <div class="header">
+      <!-- 分享 -->
+      <ul class="share">
+         <li>
+          <a style="width:140px;height:48px;" onclick="window.open('http://yqfs.hulai.com/home/index.html');"><img style="width:140px;height:48px;" src="img/enter.png" alt="" @mouseleave="mouseleaveKefu"></a>
+        </li>
+        <li>
+          <a onclick="window.open('https://tieba.baidu.com/f?ie=utf-8&kw=%E5%85%83%E6%B0%94%E5%B0%81%E7%A5%9E');"><img src="img/phone.png" alt="" @mouseleave="mouseleaveKefu"></a>
+        </li>
+        <li><img src="img/qq.png" alt="" @click="mouseenterQqbg"></li>
+        <li>
+          <a onclick="window.open('http://weibo.com/u/6121688980');"><img src="img/weibo.png" alt=""></a>
+        </li>
+        <li><img src="img/weChat.png" alt="" @click="mouseenterKefu"></li>
+      </ul>
+      <img src="img/wxbg.png" alt="" class="kefu" v-show="kefu">
+      <div src="img/qqbg.png" alt="" class="qqbg" v-show="qqbg">
+      </div>
+      
+      <!-- 预约、下载 -->
+      <div class="button auto">
+        <img class="erweima" src="img/erweima.png" alt="">
+          <div class="yuyue">
+            <a href="javascript:void(0)" @click="clickYuyue()"><img class="android1" src="img/android.png?v=0.0.9" alt="" style="display:block;"></a>
+            <a href="http://l.taptap.com/u6SDKX5o"><img src="img/andTag.png?v=0.0.9" alt=""></a>
+          </div>
+          <!-- <div class="clear"></div> -->
+          <a target="_blank" href="https://tracking.hoolai.com/tracking/5108/"><img class="ios1" src="img/ios.png?v=0.0.9" alt="" style="display:block;"></a>
+      </div>
+    </div>
+
+    <!-- 蒙层 -->
+    <div id="cover2" v-show="cover2" @click="closeYuyue()"></div>
+    <!-- 预约 -->
+    <div class="yy" v-show="yuyue">
+      <div class="yybg">
+        <div class="content_yuyue">
+          <div class="left_yuyue">
+            <img src="img/erweima.jpg?v=0.0.7">
+            <span>扫一扫关注</span>
+          </div>
+          <div class="right_yuyue">
+            <div class="disf">
+              <div style="padding-top: 8px;color: #426b9f;font-size:16px;margin-right: 38px;">选择手机系统：</div>
+              <div class="cursorP android" v-bind:class="{active: isAndroidActive}" @click="chooseXT('android')">Android</div>
+              <div class="cursorP ios" v-bind:class="{active: isiOSActive}" @click="chooseXT('ios')">iOS</div>
+            </div>
+            <input v-model="telephone" class="telephone mt10" type="text" name="telephone" placeholder="请输入手机号码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入手机号码'">
+            <div class="disf mt10">
+              <input v-model="code" class="code" type="text" name="code" placeholder="请输入验证码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入验证码'">
+              <input v-bind:disabled="isDisabled" v-model="smsCodeVal" @click="sendSms(this)" v-bind:class="{grayBg:isGrayBg}" type="button" class="yanzheng cursorP" name="name">
+            </div>
+            <div class="yyyx mt10 cursorP" @click="saveRecord()">预约游戏</div>
+            <div style="color:#999999;font-size:15px;text-align:center;margin-top: 15px;">已有<span style="color:#eb6949">{{totalNum}}</span>名玩家预约!</div>
+          </div>
+        </div>
+        <div class="cross" @click="closeYuyue()"></div>
+      </div>
+    </div>
+
+      <!-- 礼包 -->
+      <div class="subscribe">
+        <!-- 预约礼包 -->
+        <!-- <img src="img/yuyuelibao.png"> -->
+        <div class="gift">
+          <div class="success">
+            <img src="img/dacheng.png?v=0.0.9" alt="" v-show="successOne">
+            <img src="img/dacheng.png?v=0.0.9" alt="" style="" v-show="successTwo" class="dachengimg">
+            <img src="img/dacheng.png?v=0.0.9" alt="" style="" v-show="successThree" class="dachengimg">
+          </div>
+        </div>
+      </div>
+
+      <!-- 角色 -->
+      <div class="role">
+        <div class="switch">
+          <img src="img/xumian.png?v=0.0.9" alt="" v-show="xueMian">
+          <img src="img/jiangziya.png?v=0.0.9" alt="" v-show="jiangZiYa">
+          <img src="img/yangjian.png?v=0.0.9" alt="" v-show="yangJian">
+          <img src="img/aocunxin.png?v=0.0.9" alt="" v-show="aoCunXin">
+          <img src="img/zhouwang.png?v=0.0.9" alt="" v-show="zhouWang">
+          <img src="img/daji.png?v=0.0.9" alt="" v-show="daJi">
+          <img src="img/jifa.png?v=0.0.9" alt="" v-show="jiFa">
+          <img src="img/randeng.png?v=0.0.9" alt="" v-show="ranDeng">
+          <div class="box">
+          <div class="row_one">
+            <img :src="xmpic" @click="clickXumian">
+            <img :src="jzypic" @click="clickJiangziya">
+            <img :src="yjpic" @click="clickYangjian">
+            <img :src="acxpic" @click="clickAocunxin">
+          </div>
+          <div class="row_two">
+            <img :src="zwpic" @click="clickZhouwang">
+            <img :src="djpic" @click="clickDaji">
+            <img :src="jfpic" @click="clickJifa">
+            <img :src="rdpic" @click="clickRandeng">
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>
+          温馨提示：抵制不良游戏，拒绝盗版游戏，注意自我保护，谨防受骗上当，适度游戏益脑，沉迷游戏伤身，合理安排时间，享受健康生活
+          <br/> 本网站所有游戏仅适合于年满18周岁以上的用户。如果您未满18周岁，不建议您注册并使用本网络游戏服务；
+          <br/> 如果您坚持使用，请您务必加入本网络游戏防沉迷系统进行实名注册，同时我们将会按照您法定监护人的需求提供您在本网络游戏中的信息。
+          <br/> 您在使用本网络游戏服务之前已经明确知晓网络游戏可能给您带来的一切潜在威胁，包括长时间游戏可能不利于您的身心健康等。为了您的健康请您合理的使用本网络游戏。
+        </p>
+
+        <p>京ICP备11034336号-1 |
+          <a target="_blank" href="/assets/files/huai_wenwangwen.jpg">
+            <font>京网文[2011]0744-272号 |</font>
+          </a>
+          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502033250">
+            <font><img src="http://www.beian.gov.cn/img/ghs.png">京公网安备 11010502033250号 |</font>
+          </a>
+          <a target="_blank" href="/assets/files/huai_xukezheng.pdf">
+            <font>（总）网出证（京）字第095号 |</font>
+          </a>
+          <a href="#">
+            <font>ICP证书号:京B2-20171148</font>
+          </a>
+        </p>
+        <p>
+          <a class="c_white" target="_blank" href="http://www.hulai.com/server">服务协议 |</a>
+          <a class="c_white" target="_blank" href="http://www.hulai.com/privacy">隐私权保护声明 |</a>
+          <a class="c_white" target="_blank" href="http://www.hulai.com/minors">未成年人家长监护 |</a>
+          <a class="c_white" target="_blank" href="http://www.hulai.com/law">法律声明 |</a>
+          <a class="c_white" target="_blank" href="http://www.hulai.com/dispute">纠纷、投诉</a>
+        </p>
+        <p>
+          北京市石景山区八大处高科技园区西井路3号3号楼9229房间 010-62662622
+        </p>
+        <p>
+          Copyright © 2015 Hoolai Games. All Rights Reserved | 互爱互动（北京）科技有限公司版权所有
+        </p>
+      </div>
+  <script src="js/index.js?v=0.0.9"></script>
+</body>
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="js/snowfall.jquery.js"></script>
+<script type="text/javascript">
+  $(document).snowfall('clear');
+  $(document).snowfall({
+    image: "img/huaban.png",
+    flakeCount: 15,
+    minSize: 5,
+    maxSize: 22
+  });
+</script>
+
+</html>
